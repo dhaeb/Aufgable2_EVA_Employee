@@ -5,13 +5,20 @@ public class Employee implements IPerson {
 	private String firstName;
 	private String lastName;
 	private int id;
-	private int workingHoursPerWeek;
 	private Integer salery;
 	
-	public Employee() {}
+	private int workingHoursPerWeek;
+	
+	public Employee() {
+		this(40);
+	}
+	
+	public Employee(int workingHoursPerWeek){
+		this.workingHoursPerWeek = workingHoursPerWeek;
+	}
 	
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj) { // Vergleiche, ob gleicher Mitarbeiter übergeben wurde. Kriterium: ID
 		boolean isEqual = false;
 		if(obj != null && obj instanceof Employee){
 			Employee castedObj = (Employee) obj;
@@ -21,13 +28,12 @@ public class Employee implements IPerson {
 	}
 	
 	@Override
-	public String toString() {
+	public String toString() {			// Einfache ausgabe der Objektattribute (die von Object geerbte Methode enthält darüber keine Informationen)
 		String name = "Employee: " + firstName + " " + lastName;
 		String id = "id: " + this.id;
-		String workload = "workload: " + workingHoursPerWeek;
-		return name + "\n" +
-			   id + "\n" +
-			   workload;
+		String workload = "workload: " + this.workingHoursPerWeek + " hours per week";
+		String salery = "Gehalt " + this.salery;
+		return "(" + name +  ", " + id  + ", " +  workload + ", " + salery + ")";
 	}
 	
 	@Override
@@ -76,6 +82,16 @@ public class Employee implements IPerson {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	@Override
+	public Integer getSalery() {
+		return salery;
+	}
+	
+	@Override
+	public void setSalery(Integer salery) {
+		this.salery = salery;
+	}
 
 	public int getWorkingHoursPerWeek() {
 		return workingHoursPerWeek;
@@ -83,14 +99,6 @@ public class Employee implements IPerson {
 	
 	public void setWorkingHoursPerWeek(int workingHoursPerWeek) {
 		this.workingHoursPerWeek = workingHoursPerWeek;
-	}
-
-	public Integer getSalery() {
-		return salery;
-	}
-
-	public void setSalery(Integer salery) {
-		this.salery = salery;
 	}
 }
 

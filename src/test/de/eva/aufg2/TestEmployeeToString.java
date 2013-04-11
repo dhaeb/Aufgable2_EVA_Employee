@@ -16,6 +16,7 @@ public class TestEmployeeToString { // test benötigt funktionierende Getter und
 		testableEmployee.setLastName("Mustermann");
 		testableEmployee.setId(123456);
 		testableEmployee.setWorkingHoursPerWeek(20);
+		testableEmployee.setSalery(987);
 	}
 	
 	@Test
@@ -25,6 +26,7 @@ public class TestEmployeeToString { // test benötigt funktionierende Getter und
 		assertTrue("Method Employee.toString() does not contain the last name!", employeeDescription.contains("Mustermann"));
 		assertTrue("Method Employee.toString() does not contain the id!", employeeDescription.contains("123456"));
 		assertTrue("Method Employee.toString() does not contain the workload!", employeeDescription.contains("20"));
+		assertTrue("Method Employee.toString() does not contain the salery!", employeeDescription.contains("987"));
 	}
 	
 }
