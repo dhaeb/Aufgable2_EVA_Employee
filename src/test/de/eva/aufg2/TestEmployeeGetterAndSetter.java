@@ -20,6 +20,7 @@ public class TestEmployeeGetterAndSetter {
 		testableEmployee.getLastName();
 		testableEmployee.getId();
 		testableEmployee.getWorkingHoursPerWeek();
+		testableEmployee.getSalery();
 	}
 	
 	@Test
@@ -28,10 +29,13 @@ public class TestEmployeeGetterAndSetter {
 		testableEmployee.setLastName("Mustermann");
 		testableEmployee.setId(123456);
 		testableEmployee.setWorkingHoursPerWeek(20);
+		testableEmployee.setSalery(Integer.valueOf(1200));
+		
 		assertEquals("Max", testableEmployee.getFirstName());
 		assertEquals("Mustermann", testableEmployee.getLastName());
 		assertEquals(123456, testableEmployee.getId());
 		assertEquals(20, testableEmployee.getWorkingHoursPerWeek());
+		assertEquals(Integer.valueOf(1200), testableEmployee.getSalery());
 	}
 	
 }

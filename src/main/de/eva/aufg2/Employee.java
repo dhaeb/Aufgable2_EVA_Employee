@@ -1,11 +1,12 @@
 package de.eva.aufg2;
 
-public class Employee implements Person {
+public class Employee implements IPerson {
 
 	private String firstName;
 	private String lastName;
 	private int id;
 	private int workingHoursPerWeek;
+	private Integer salery;
 	
 	public Employee() {}
 	
@@ -30,19 +31,19 @@ public class Employee implements Person {
 	}
 	
 	@Override
-	public int compareTo(Person o) {	// Vergleiche Personen anhand der ID 
-		int idOfOtherPersion  = o.getId();
-		int comparisonResult = compareUsingId(idOfOtherPersion);
+	public int compareTo(IPerson o) {	// Vergleiche Personen anhand des Gehaltes 
+		Integer saleryOfComparablePerson = o.getSalery();
+		int comparisonResult = compareUsingSalery(saleryOfComparablePerson);
 		return comparisonResult;
 	}
 
-	private int compareUsingId(int idOfOtherPersion) {
-		int comparedResult = 0; // Ergebnis ist 0 wenn beide Personen die gleiche ID besitzen
-		if(this.id > idOfOtherPersion) // Ergebnis ist 1 wenn Vergleichsperson kleinere ID besitzt
+	private int compareUsingSalery(Integer saleryOfComparablePerson) {
+		int comparedResult = 0; // Ergebnis ist 0 wenn beide Personen das gleiche Gehalt besitzen
+		if(this.salery > saleryOfComparablePerson) // Ergebnis ist 1 wenn Vergleichsperson kleineres Gehalt besitzt
 			comparedResult = 1;
 		else 
-			if(this.id != idOfOtherPersion)
-				comparedResult = -1; // Ergebnis ist -1 wenn Vergleichsperson größere ID besitzt
+			if(this.salery < saleryOfComparablePerson)
+				comparedResult = -1; // Ergebnis ist -1 wenn Vergleichsperson größeres Gehalt besitzt
 		return comparedResult;
 	}
 
@@ -82,6 +83,14 @@ public class Employee implements Person {
 	
 	public void setWorkingHoursPerWeek(int workingHoursPerWeek) {
 		this.workingHoursPerWeek = workingHoursPerWeek;
+	}
+
+	public Integer getSalery() {
+		return salery;
+	}
+
+	public void setSalery(Integer salery) {
+		this.salery = salery;
 	}
 }
 

@@ -7,9 +7,9 @@ import org.junit.Test;
 
 public class TestEmployeeComparable { // test benötigt funktionierende Getter und Setter in der Klasse Employee
 
-	private static final int LOW_ID = 1;
-	private static final int MIDDLE_ID = 2;
-	private static final int HIGH_ID = 3;
+	private static final int LOW_SALERY = 1000;
+	private static final int MIDDLE_SALERY = 2000;
+	private static final int HIGH_SALERY = 3000;
 	
 	private Employee testableEmployee1;
 	private Employee testableEmployee2;
@@ -18,21 +18,21 @@ public class TestEmployeeComparable { // test benötigt funktionierende Getter u
 	@Before
 	public void setup(){
 		testableEmployee1 = new Employee();
-		testableEmployee1.setId(LOW_ID);
+		testableEmployee1.setSalery(LOW_SALERY);
 		testableEmployee2 = new Employee();
-		testableEmployee2.setId(MIDDLE_ID);
+		testableEmployee2.setSalery(MIDDLE_SALERY);
 		testableEmployee3 = new Employee();
-		testableEmployee3.setId(HIGH_ID);
+		testableEmployee3.setSalery(HIGH_SALERY);
 	}
 	
 	@Test
-	public void testEquals(){
+	public void testCompareEquals(){
 		Employee sameEmployee = new Employee();
-		sameEmployee.setId(LOW_ID);
+		sameEmployee.setSalery(LOW_SALERY);
 		assertEquals(0 ,testableEmployee1.compareTo(sameEmployee));
-		sameEmployee.setId(MIDDLE_ID);
+		sameEmployee.setSalery(MIDDLE_SALERY);
 		assertEquals(0 ,testableEmployee2.compareTo(sameEmployee));
-		sameEmployee.setId(HIGH_ID);
+		sameEmployee.setSalery(HIGH_SALERY);
 		assertEquals(0 ,testableEmployee3.compareTo(sameEmployee));
 	}
 	
