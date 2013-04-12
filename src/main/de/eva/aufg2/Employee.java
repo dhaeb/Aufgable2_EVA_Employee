@@ -33,7 +33,7 @@ public class Employee implements IPerson {
 		String id = "id: " + this.id;
 		String workload = "workload: " + this.workingHoursPerWeek + " hours per week";
 		String salery = "Gehalt " + this.salery;
-		return "(" + name +  ", " + id  + ", " +  workload + ", " + salery + ")";
+		return String.format("(%s, %s, %s, %s )" , name, id, workload, salery);
 	}
 	
 	@Override
