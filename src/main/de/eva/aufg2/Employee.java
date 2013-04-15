@@ -5,7 +5,7 @@ public class Employee implements IPerson {
 	private String firstName;
 	private String lastName;
 	private int id;
-	private Integer salery;
+	private Integer salary;
 
 	private int workingHoursPerWeek;
 
@@ -35,25 +35,25 @@ public class Employee implements IPerson {
 		String name = "Employee: " + firstName + " " + lastName;
 		String id = "id: " + this.id;
 		String workload = "workload: " + this.workingHoursPerWeek + " hours per week";
-		String salery = "Gehalt " + this.salery;
-		return String.format("(%s, %s, %s, %s )", name, id, workload, salery);
+		String salary = "Gehalt " + this.salary;
+		return String.format("(%s, %s, %s, %s )", name, id, workload, salary);
 	}
 
 	@Override
 	public int compareTo(IPerson o) { // Vergleiche Personen anhand des Gehaltes
-		Integer saleryOfComparablePerson = o.getSalery();
-		int comparisonResult = compareUsingSalery(saleryOfComparablePerson);
+		Integer salaryOfComparablePerson = o.getSalary();
+		int comparisonResult = compareUsingSalery(salaryOfComparablePerson);
 		return comparisonResult;
 	}
 
-	private int compareUsingSalery(Integer saleryOfComparablePerson) {
+	private int compareUsingSalery(Integer salaryOfComparablePerson) {
 		int comparedResult = 0; // Ergebnis ist 0 wenn beide Personen das
 								// gleiche Gehalt besitzen
-		if (this.salery > saleryOfComparablePerson) // Ergebnis ist 1 wenn
+		if (this.salary > salaryOfComparablePerson) // Ergebnis ist 1 wenn
 													// Vergleichsperson
 													// kleineres Gehalt besitzt
 			comparedResult = 1;
-		else if (this.salery < saleryOfComparablePerson)
+		else if (this.salary < salaryOfComparablePerson)
 			comparedResult = -1; // Ergebnis ist -1 wenn Vergleichsperson
 									// größeres Gehalt besitzt
 		return comparedResult;
@@ -90,13 +90,13 @@ public class Employee implements IPerson {
 	}
 
 	@Override
-	public Integer getSalery() {
-		return salery;
+	public Integer getSalary() {
+		return salary;
 	}
 
 	@Override
-	public void setSalery(Integer salery) {
-		this.salery = salery;
+	public void setSalary(Integer salary) {
+		this.salary = salary;
 	}
 
 	public int getWorkingHoursPerWeek() {
