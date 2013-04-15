@@ -6,50 +6,56 @@ public class Employee implements IPerson {
 	private String lastName;
 	private int id;
 	private Integer salery;
-	
+
 	private int workingHoursPerWeek;
-	
+
 	public Employee() {
 		this(40);
 	}
-	
-	public Employee(int workingHoursPerWeek){
+
+	public Employee(int workingHoursPerWeek) {
 		this.workingHoursPerWeek = workingHoursPerWeek;
 	}
-	
+
 	@Override
-	public boolean equals(Object obj) { // Vergleiche, ob gleicher Mitarbeiter übergeben wurde. Kriterium: ID
+	public boolean equals(Object obj) { // Vergleiche, ob gleicher Mitarbeiter
+										// übergeben wurde. Kriterium: ID
 		boolean isEqual = false;
-		if(obj != null && obj instanceof Employee){
+		if (obj != null && obj instanceof Employee) {
 			Employee castedObj = (Employee) obj;
 			isEqual = this.id == castedObj.id;
 		}
 		return isEqual;
 	}
-	
+
 	@Override
-	public String toString() {			// Einfache ausgabe der Objektattribute (die von Object geerbte Methode enthält darüber keine Informationen)
+	public String toString() { // Einfache ausgabe der Objektattribute (die von
+								// Object geerbte Methode enthält darüber keine
+								// Informationen)
 		String name = "Employee: " + firstName + " " + lastName;
 		String id = "id: " + this.id;
 		String workload = "workload: " + this.workingHoursPerWeek + " hours per week";
 		String salery = "Gehalt " + this.salery;
-		return String.format("(%s, %s, %s, %s )" , name, id, workload, salery);
+		return String.format("(%s, %s, %s, %s )", name, id, workload, salery);
 	}
-	
+
 	@Override
-	public int compareTo(IPerson o) {	// Vergleiche Personen anhand des Gehaltes 
+	public int compareTo(IPerson o) { // Vergleiche Personen anhand des Gehaltes
 		Integer saleryOfComparablePerson = o.getSalery();
 		int comparisonResult = compareUsingSalery(saleryOfComparablePerson);
 		return comparisonResult;
 	}
 
 	private int compareUsingSalery(Integer saleryOfComparablePerson) {
-		int comparedResult = 0; // Ergebnis ist 0 wenn beide Personen das gleiche Gehalt besitzen
-		if(this.salery > saleryOfComparablePerson) // Ergebnis ist 1 wenn Vergleichsperson kleineres Gehalt besitzt
+		int comparedResult = 0; // Ergebnis ist 0 wenn beide Personen das
+								// gleiche Gehalt besitzen
+		if (this.salery > saleryOfComparablePerson) // Ergebnis ist 1 wenn
+													// Vergleichsperson
+													// kleineres Gehalt besitzt
 			comparedResult = 1;
-		else 
-			if(this.salery < saleryOfComparablePerson)
-				comparedResult = -1; // Ergebnis ist -1 wenn Vergleichsperson größeres Gehalt besitzt
+		else if (this.salery < saleryOfComparablePerson)
+			comparedResult = -1; // Ergebnis ist -1 wenn Vergleichsperson
+									// größeres Gehalt besitzt
 		return comparedResult;
 	}
 
@@ -82,12 +88,12 @@ public class Employee implements IPerson {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
+
 	@Override
 	public Integer getSalery() {
 		return salery;
 	}
-	
+
 	@Override
 	public void setSalery(Integer salery) {
 		this.salery = salery;
@@ -96,9 +102,8 @@ public class Employee implements IPerson {
 	public int getWorkingHoursPerWeek() {
 		return workingHoursPerWeek;
 	}
-	
+
 	public void setWorkingHoursPerWeek(int workingHoursPerWeek) {
 		this.workingHoursPerWeek = workingHoursPerWeek;
 	}
 }
-
