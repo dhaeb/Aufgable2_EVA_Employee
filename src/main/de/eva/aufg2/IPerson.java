@@ -4,8 +4,8 @@ public interface IPerson {
 	public abstract int getId();
 	public abstract void setId(int id);
 	
-	public Integer getSalery();
-	public void setSalery(Integer salery);
+	public Integer getSalary();
+	public void setSalary(Integer salary);
 	
 	String getFirstName(); 
 	String getLastName();

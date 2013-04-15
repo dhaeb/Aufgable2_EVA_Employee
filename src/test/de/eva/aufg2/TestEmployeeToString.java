@@ -16,7 +16,7 @@ public class TestEmployeeToString { // test benötigt funktionierende Getter und
 		testableEmployee.setLastName("Mustermann");
 		testableEmployee.setId(123456);
 		testableEmployee.setWorkingHoursPerWeek(20);
-		testableEmployee.setSalery(987);
+		testableEmployee.setSalary(987);
 	}
 	
 	@Test
