@@ -18,21 +18,21 @@ public class TestEmployeeComparable { // test benötigt funktionierende Getter u
 	@Before
 	public void setup(){
 		testableEmployee1 = new Employee();
-		testableEmployee1.setSalery(LOW_SALERY);
+		testableEmployee1.setSalary(LOW_SALERY);
 		testableEmployee2 = new Employee();
-		testableEmployee2.setSalery(MIDDLE_SALERY);
+		testableEmployee2.setSalary(MIDDLE_SALERY);
 		testableEmployee3 = new Employee();
-		testableEmployee3.setSalery(HIGH_SALERY);
+		testableEmployee3.setSalary(HIGH_SALERY);
 	}
 	
 	@Test
 	public void testCompareEquals(){
 		Employee sameEmployee = new Employee();
-		sameEmployee.setSalery(LOW_SALERY);
+		sameEmployee.setSalary(LOW_SALERY);
 		assertEquals(0 ,testableEmployee1.compareTo(sameEmployee));
-		sameEmployee.setSalery(MIDDLE_SALERY);
+		sameEmployee.setSalary(MIDDLE_SALERY);
 		assertEquals(0 ,testableEmployee2.compareTo(sameEmployee));
-		sameEmployee.setSalery(HIGH_SALERY);
+		sameEmployee.setSalary(HIGH_SALERY);
 		assertEquals(0 ,testableEmployee3.compareTo(sameEmployee));
 	}
 	
