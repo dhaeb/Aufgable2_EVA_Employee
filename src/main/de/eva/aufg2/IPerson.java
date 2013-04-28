@@ -1,15 +1,20 @@
 package de.eva.aufg2;
 
 public interface IPerson extends Comparable<IPerson> {
-	public abstract int getId();
-	public abstract void setId(int id);
+	//public kann auch entfallen, da Schnittstellen nur �ffentliche Methoden enthalten
 	
-	public Integer getSalary();
-	public void setSalary(Integer salary);
+	//alle Methoden sind implizit abstract, da die Methoden erst in der realisierenden Klasse
+	//implementiert werden
 	
-	String getFirstName(); 
-	String getLastName();
+	public int getId();
+	public void setId(int id);
 	
-	void setFirstName(String firstName);
-	void setLastName(String lastName);
+	public Integer getSalary();				// für das Attribut "Gehalt" wird nicht der Basistyp int sondern
+	public void setSalary(Integer salary);  // die Klasse Integer verwendet (demo: Integer verhält sich wie int)
+	
+	public String getFirstName(); 
+	public String getLastName();
+	
+	public void setFirstName(String firstName);
+	public void setLastName(String lastName);
 }

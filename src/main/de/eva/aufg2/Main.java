@@ -11,19 +11,19 @@ public class Main {
 	public static void main(String[] args) {
 		//Ein paar beliebige Mitarbeiter sollen nach Gehalt geordnet werden
 			//Erstellung der Mitarbeiter
-		Employee poorProgrammer = PersonUtil.createEmployee("Programmer", "", 1, 40, Integer.valueOf(36000));
-		Employee projectManger = PersonUtil.createEmployee("Manager", "", 2, 38, Integer.valueOf(80000));
-		Employee softwareArchitect = PersonUtil.createEmployee("Architekt", "", 3, 38, Integer.valueOf(63000));
+		Employee poorProgrammer = PersonUtil.createEmployee("John", "Smith", 1, 40, 36000);
+		Employee projectManager = PersonUtil.createEmployee("Frank", "Miller", 2, 38, 80000);
+		Employee softwareArchitect = PersonUtil.createEmployee("Tim", "Fisher", 3, 38, 63000);
+		
 			//Erstellung einer Liste, die sortiert werden kann
 		List<Employee> employeeList = new ArrayList<Employee>();
 			//Hinzufügen der zuvor erstellten Mitarbeiter
 		employeeList.add(poorProgrammer);
-		employeeList.add(projectManger);
-		employeeList.add(softwareArchitect);
+		employeeList.add(projectManager);
+		employeeList.add(softwareArchitect); 
 			//aufsteigende Sortierung
 		Collections.sort(employeeList);
-		
-			//ausgabe über STDOUT der aufsteigend sortierten Liste
+		//ausgabe über STDOUT der aufsteigend sortierten Liste
 		System.out.println("AUFSTEIGENDE SORTIERUNG: \n");
 		System.out.println(employeeList);
 			

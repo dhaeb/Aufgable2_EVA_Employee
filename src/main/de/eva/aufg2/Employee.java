@@ -29,14 +29,35 @@ public class Employee implements IPerson {
 	}
 
 	@Override
-	public String toString() { // Einfache ausgabe der Objektattribute (die von
+	public String toString() { // Einfache Ausgabe der Objektattribute (die von
 								// Object geerbte Methode enthält darüber keine
 								// Informationen)
-		String name = "Employee: " + firstName + " " + lastName;
-		String id = "id: " + this.id;
-		String workload = "workload: " + this.workingHoursPerWeek + " hours per week";
-		String salary = "Gehalt " + this.salary;
-		return String.format("(%s, %s, %s, %s )", name, id, workload, salary);
+
+		// Strings k�nnen mit dem '+'-Operator zusammengesetzt werden, z.B.:
+		// String value = "Hello" + " Java!"
+		// Intern wird bei jeder Verwendung des Operators ein neues
+		// String-Objekt erstellt.
+		// Für die Performance ist das weniger optimal!
+
+		// Alternative: StringBuilder
+		// Hier können wir die Zeichenfolgen einfach einem Objekt hinzufügen und
+		// die Ergebniszeichenfolge in einem
+		// Schritt erstellen
+
+		StringBuilder builder = new StringBuilder();
+		builder.append("Employee [");
+		builder.append("ID: ");
+		builder.append(this.id);
+		builder.append(" Firstname: ");
+		builder.append(this.firstName);
+		builder.append(" Lastname: ");
+		builder.append(this.lastName);
+		builder.append(" Workload: ");
+		builder.append(this.workingHoursPerWeek);
+		builder.append(" Salary: ");
+		builder.append(this.salary);
+		builder.append("]");
+		return builder.toString();
 	}
 
 	@Override
