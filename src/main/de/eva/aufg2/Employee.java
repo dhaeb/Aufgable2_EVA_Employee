@@ -5,7 +5,7 @@ public class Employee implements IPerson {
 	private String firstName;
 	private String lastName;
 	private int id;
-	private Integer salary;
+	private int salary;
 
 	private int workingHoursPerWeek;
 
@@ -111,12 +111,12 @@ public class Employee implements IPerson {
 	}
 
 	@Override
-	public Integer getSalary() {
+	public int getSalary() {
 		return salary;
 	}
 
 	@Override
-	public void setSalary(Integer salary) {
+	public void setSalary(int salary) {
 		this.salary = salary;
 	}
 

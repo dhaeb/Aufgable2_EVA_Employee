@@ -35,7 +35,7 @@ public class TestEmployeeGetterAndSetter {
 		assertEquals("Mustermann", testableEmployee.getLastName());
 		assertEquals(123456, testableEmployee.getId());
 		assertEquals(20, testableEmployee.getWorkingHoursPerWeek());
-		assertEquals(Integer.valueOf(1200), testableEmployee.getSalary());
+		assertEquals(1200, testableEmployee.getSalary());
 	}
 	
 }
