@@ -33,7 +33,7 @@ public class Employee implements IPerson {
 								// Object geerbte Methode enthält darüber keine
 								// Informationen)
 
-		// Strings k�nnen mit dem '+'-Operator zusammengesetzt werden, z.B.:
+		// Strings können mit dem '+'-Operator zusammengesetzt werden, z.B.:
 		// String value = "Hello" + " Java!"
 		// Intern wird bei jeder Verwendung des Operators ein neues
 		// String-Objekt erstellt.

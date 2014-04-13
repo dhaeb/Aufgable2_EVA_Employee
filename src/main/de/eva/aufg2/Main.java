@@ -13,7 +13,7 @@ public class Main {
 			//Erstellung der Mitarbeiter
 		Employee poorProgrammer = PersonUtil.createEmployee("John", "Smith", 1, 40, 36000);
 		Employee projectManager = PersonUtil.createEmployee("Frank", "Miller", 2, 38, 80000);
-		Employee softwareArchitect = PersonUtil.createEmployee("Tim", "Fisher", 3, 38, 63000);
+		Employee softwareArchitect = PersonUtil.createEmployee("Tim", "Fisher", 3, 38, 64000);
 		
 			//Erstellung einer Liste, die sortiert werden kann
 		List<Employee> employeeList = new ArrayList<Employee>();
