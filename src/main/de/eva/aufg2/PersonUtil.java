@@ -12,4 +12,14 @@ public class PersonUtil {
 		return newEmployee;
 	}
 	
+	public static double calculateAvgSalary(Iterable<Employee> employees){
+		double meanSalary = 0;
+		int count = 0;
+		for(Employee e : employees){
+			meanSalary = e.getSalary();
+			count++;
+		}
+		return meanSalary / count;
+	}
+	
 }
