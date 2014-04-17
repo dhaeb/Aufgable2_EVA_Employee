@@ -1,15 +1,15 @@
 package de.eva.aufg2;
 
-public interface IPerson {
-	public abstract int getId();
-	public abstract void setId(int id);
+ interface IPerson {
+	int getId();
+	void setId(int id);
 	
-	public Integer getSalary();
-	public void setSalary(Integer salary);
+	int getSalary();
+	void setSalary(int salary);
 	
 	String getFirstName(); 
-	String getLastName();
-	
 	void setFirstName(String firstName);
+	
+	String getLastName();
 	void setLastName(String lastName);
 }
