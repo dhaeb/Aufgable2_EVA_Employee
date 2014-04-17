@@ -1,6 +1,6 @@
 package de.eva.aufg2;
 
- interface IPerson {
+ interface IPerson extends Comparable<IPerson> {
 	int getId();
 	void setId(int id);
 	
