@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestEmployeeDefaultWorkload { // test benötigt funktionierende Getter und Setter in der Klasse Employee
+public class TestEmployeeDefaultWorkload {
 
 	private Employee testableEmployee;
 	private Employee testableEmployee2;

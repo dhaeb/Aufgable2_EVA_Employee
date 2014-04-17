@@ -1,20 +1,15 @@
 package de.eva.aufg2;
 
-public interface IPerson extends Comparable<IPerson> {
-	//public kann auch entfallen, da Schnittstellen nur öffentliche Methoden enthalten
+ interface IPerson {
+	int getId();
+	void setId(int id);
 	
-	//alle Methoden sind implizit abstract, da die Methoden erst in der realisierenden Klasse
-	//implementiert werden
+	int getSalary();
+	void setSalary(int salary);
 	
-	public int getId();
-	public void setId(int id);
+	String getFirstName(); 
+	void setFirstName(String firstName);
 	
-	public int getSalary();				
-	public void setSalary(int salary);  
-	
-	public String getFirstName(); 
-	public String getLastName();
-	
-	public void setFirstName(String firstName);
-	public void setLastName(String lastName);
+	String getLastName();
+	void setLastName(String lastName);
 }

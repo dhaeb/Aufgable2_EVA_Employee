@@ -5,8 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestEmployeeComparable { // test benötigt funktionierende Getter und Setter in der Klasse Employee
-
+public class TestEmployeeComparable { 
+	
 	private static final int LOW_SALERY = 1000;
 	private static final int MIDDLE_SALERY = 2000;
 	private static final int HIGH_SALERY = 3000;

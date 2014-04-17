@@ -1,25 +1,28 @@
 package de.eva.aufg2;
 
+import java.util.List;
+
 public class PersonUtil {
 
-	public static Employee createEmployee(String firstName, String lastName, int id, int workload, Integer salary){
+	public static Employee createEmployee(String firstName, String lastName, int id, int workingHoursPerWeek, int salary){
 		Employee newEmployee = new Employee();
 		newEmployee.setFirstName(firstName);
 		newEmployee.setLastName(lastName);
 		newEmployee.setId(id);
-		newEmployee.setWorkingHoursPerWeek(workload);
+		newEmployee.setWorkingHoursPerWeek(workingHoursPerWeek);
 		newEmployee.setSalary(salary);
 		return newEmployee;
 	}
 	
-	public static double calculateAvgSalary(Iterable<Employee> employees){
-		double meanSalary = 0;
+	public static double calculateAvgSalary(List<Employee> employees){
+		double averageSalary = 0;
 		int count = 0;
 		for(Employee e : employees){
-			meanSalary += e.getSalary();
+			averageSalary = e.getSalary();
 			count++;
 		}
-		return meanSalary / count;
+		double result = averageSalary / count;
+		return result;
 	}
 	
 }

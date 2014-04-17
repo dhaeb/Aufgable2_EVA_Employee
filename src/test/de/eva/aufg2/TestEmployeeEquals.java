@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestEmployeeEquals { // test benötigt funktionierende Getter und Setter in der Klasse Employee
+public class TestEmployeeEquals {
 	
 	private Employee testableEmployee;
 

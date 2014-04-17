@@ -24,12 +24,12 @@ public class TestEmployeeGetterAndSetter {
 	}
 	
 	@Test
-	public void testSetter(){ // dieser Test kann nur funktionieren, wenn der Getter Test erfolgreich ausgeführt wird
+	public void testSetter(){
 		testableEmployee.setFirstName("Max");
 		testableEmployee.setLastName("Mustermann");
 		testableEmployee.setId(123456);
 		testableEmployee.setWorkingHoursPerWeek(20);
-		testableEmployee.setSalary(Integer.valueOf(1200));
+		testableEmployee.setSalary(1200);
 		
 		assertEquals("Max", testableEmployee.getFirstName());
 		assertEquals("Mustermann", testableEmployee.getLastName());
