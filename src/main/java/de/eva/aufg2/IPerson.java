@@ -12,4 +12,5 @@ package de.eva.aufg2;
 	
 	String getLastName();
 	void setLastName(String lastName);
+	
 }
