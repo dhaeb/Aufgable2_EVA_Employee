@@ -18,7 +18,7 @@ public class PersonUtil {
 		double averageSalary = 0;
 		int count = 0;
 		for(Employee e : employees){
-			averageSalary = e.getSalary();
+			averageSalary += e.getSalary();
 			count++;
 		}
 		double result = averageSalary / count;
